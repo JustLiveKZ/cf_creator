@@ -23,7 +23,12 @@ class App:
         with open(cmakelists, 'w') as f:
             f.write(content.replace('%ProjectName%', self.args.name))
 
+    def _open(self):
+        os.system('clion {}'.format(self._get_path()))
+
     def run(self):
         self._clone()
         self._remove_git()
         self._replace_name()
+        if self.args.open:
+            self._open()

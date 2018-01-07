@@ -18,3 +18,9 @@ parser.add_argument(
     default=settings.REPOSITORY_URL,
     help='Repository URL (git) with JHelper template',
 )
+
+parser.add_argument(
+    '--open', '-o',
+    action='store_true',
+    help='Is selected opens CLion right after cloning project',
+)
