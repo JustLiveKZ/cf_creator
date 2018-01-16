@@ -4,13 +4,13 @@ from . import settings
 parser = ArgumentParser(prog='cf_creator')
 
 parser.add_argument(
-    'name',
-    help='Name of the new project',
+    'path',
+    help='Path to the project',
 )
 
 parser.add_argument(
-    '--path', '-p',
-    help='Path to folder',
+    '--name', '-n',
+    help='Name of the project, defaults to last section of path',
 )
 
 parser.add_argument(
@@ -20,7 +20,7 @@ parser.add_argument(
 )
 
 parser.add_argument(
-    '--open', '-o',
+    '--do-not-open', '-do',
     action='store_true',
-    help='Is selected opens CLion right after cloning project',
+    help='Do not open CLion right after cloning project',
 )
